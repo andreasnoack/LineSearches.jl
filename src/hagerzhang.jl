@@ -450,7 +450,7 @@ function secant2!(ϕdϕ,
         # we updated a, do it for b too
         c = secant(alphas, slopes, ia, iA)
     end
-    # Only an interior second secant point is worth an evaluation, for the same reason
+    # Only an interior second secant point is worth an evaluation, for the same reason as the first secant call above
     if (iA == ic || iB == ic) && a < c < b
         if display & SECANT2 > 0
             println("secant2: second c = ", c)
